@@ -1,0 +1,41 @@
+/* tinder login stylesheet */
+
+body{
+    font-family: sans-serif;
+    margin: 0;
+    background-image: url(images/Tinder-logo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.form-container{
+    background-color: white;
+}
+
+.links{
+    color: darkgrey;
+    text-decoration: underline;
+}
+
+.headings{
+  font-weight: bolder;
+  font-style: italic;
+}
+
+#login-fb, #login-phone{
+  border-radius: 25px;
+  font-weight: bold;
+  padding: 50px 10px 50px 10px;
+
+}
+
+.tinder-logo{
+  width: 15%;
+  height: 15%;
+  margin: 10px auto;
+}
