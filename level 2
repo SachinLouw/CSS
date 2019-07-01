@@ -1,0 +1,63 @@
+function FirstDuplicate(array){ 
+    
+    var i;
+    
+    for (i in array)
+    {
+        var j;
+        for(j = i.indexOf()+1; j < array.length; j++)
+        {
+            if (i == array[j]) return j;
+            else return -1;
+        }
+    }
+}
+
+function arrayMode(array){
+
+   var i;
+   var j;
+   var counted = [];
+
+   for (i in array)
+   {//creates 2d array which counts how numbers appear
+       if (i in counted)
+       {
+           var x;
+           for (x in counted)
+           {
+               if (x[0]==i)
+               {
+                   x[1]++;
+               }
+           }
+       }
+
+       else
+       {
+           counted.push([i,0]);
+       }
+   }
+
+   var modes = [];
+   for (j in counted)
+   {//creates array with counted values
+       modes.push(j[1]);
+   }
+
+   var max = modes[0];
+   var y;
+   for (y = 1 ; y<modes.length; y++)
+   {//takes counted values and finds the largest
+       if (modes[y] > max) {max = arr[y];}
+   }
+
+   var k;
+   for (k in counted)
+   {//compares to find corresponding number which is the mode
+       if (k[1] == max)
+       {
+           return k[0];
+       }
+   }
+}
