@@ -1,16 +1,31 @@
 function FirstDuplicate(array){ 
     
     var i;
+    var indexes = [];
     
     for (i in array)
     {
         var j;
+        
         for(j = i.indexOf()+1; j < array.length; j++)
         {
-            if (i == array[j]) return j;
-            else return -1;
+            if (i == array[j]) indexes.push(i);
         }
     }
+    
+    if (indexes.length > 0)
+    {
+        var min = indexes[0];
+        var y;
+        for (y = 1 ; y<indexes.length; y++)
+        {
+            if (indexes[y] < min) min = array[y];
+        }
+    }
+    
+    else {return -1;}
+    
+    return min;
 }
 
 function arrayMode(array){
@@ -61,3 +76,7 @@ function arrayMode(array){
        }
    }
 }
+
+
+---\
+
